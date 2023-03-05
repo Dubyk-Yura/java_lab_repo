@@ -16,7 +16,7 @@ public class Bicycle {
     private static final double priceBike = 10000; //price in UAH
     private String type;
     private String brand;
-    private double MaxSpeed;// max speed in m/s
+    private double maxSpeed;// max speed in m/s
     private double currentSpeed;
     private static Bicycle instance;
 
@@ -29,13 +29,13 @@ public class Bicycle {
     }
 
     public void accelerate(int speed) {
-        if ((speed + currentSpeed) > MaxSpeed) {
+        var newSpeed = currentSpeed + speed;
+        if (newSpeed > maxSpeed) {
             System.out.println("Speed with accelerate is more than maximum speed");
-        } else {
-            currentSpeed += speed;
-            System.out.println("current speed is changed and it equal to " + currentSpeed);
+            return;
         }
-
+        currentSpeed = newSpeed;
+        System.out.println("Current speed is changed and it equal to " + currentSpeed);
     }
 
     public void brake() {
@@ -74,8 +74,9 @@ public class Bicycle {
         bike[3].setType("Roads");
 
         for (int idx = 0; idx < bike.length; idx++) {
-            System.out.println("bike " + (idx + 1) + ": " + bike[idx].toString() + ";");
+            System.out.println("Bike " + (idx + 1) + ": " + bike[idx].toString() + ";");
         }
+        bike[3].accelerate(10);
     }
 }
 

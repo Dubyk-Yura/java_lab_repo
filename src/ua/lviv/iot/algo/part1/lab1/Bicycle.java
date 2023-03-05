@@ -29,23 +29,23 @@ public class Bicycle {
     }
 
     public void accelerate(int speed) {
-        if ((speed + MaxSpeed) > currentSpeed) {
+        if ((speed + currentSpeed) > MaxSpeed) {
             System.out.println("Speed with accelerate is more than maximum speed");
         } else {
             currentSpeed += speed;
-            System.out.printf("current speed is changed and it equal to ", currentSpeed);
+            System.out.println("current speed is changed and it equal to " + currentSpeed);
         }
 
     }
 
     public void brake() {
         currentSpeed = 0;
-        System.out.println("bike was stopped");
+        System.out.println("bike \"" + brand + "\" was stopped;");
     }
 
     public void increasePrice(double price) {
         price = priceBike + price;
-        System.out.printf("Price of bicycle after increase is ", price);
+        System.out.println("Price of bicycle after increase is " + price);
     }
 
 
@@ -65,6 +65,7 @@ public class Bicycle {
         bike[2].setMaxSpeed(50);
         bike[2].setType("Roads");
 
+
         //create second object with instance
         bike[3] = getInstance();
         bike[3].setBrand("Marin Bikes");
@@ -72,8 +73,8 @@ public class Bicycle {
         bike[3].setMaxSpeed(45);
         bike[3].setType("Roads");
 
-        for(int idx = 0; idx<bike.length; idx++){
-            System.out.println("bike "+(idx+1)+": "+bike[idx].toString()+";" );
+        for (int idx = 0; idx < bike.length; idx++) {
+            System.out.println("bike " + (idx + 1) + ": " + bike[idx].toString() + ";");
         }
     }
 }

@@ -1,3 +1,4 @@
+
 Create a class according to your variant from the list below.
 Using the Lombok library, implement set and get methods, constructors with arguments, a default constructor, and an overridden toString() method.
 The class should contain a public static method getInstance() and a static field instance, the value of which will be returned by the getInstance method.

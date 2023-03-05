@@ -11,12 +11,13 @@ import lombok.ToString;
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString
+
 public class Bicycle {
     private static final double priceIncrementUah = 10000;
-    private String type;
-    private String brand;
-    private double maxSpeed;// max speed in m/s
-    private double currentSpeed;
+    private String bikeType;
+    private String bikeBrand;
+    private double maxBikeSpeed;// max speed in m/s
+    private double bikeCurrentSpeed;
     private static Bicycle instance;
 
 
@@ -28,22 +29,22 @@ public class Bicycle {
     }
 
     public void accelerate(int speed) {
-        var newSpeed = currentSpeed + speed;
-        if (newSpeed > maxSpeed) {
+        var newSpeed = bikeCurrentSpeed + speed;
+        if (newSpeed > maxBikeSpeed) {
             System.out.println("Speed with accelerate is more than maximum speed");
             return;
         }
-        currentSpeed = newSpeed;
-        System.out.println("Current speed is changed and it equal to " + currentSpeed);
+        bikeCurrentSpeed = newSpeed;
+        System.out.println("Current speed is changed and it equal to " + bikeCurrentSpeed);
     }
 
     public void brake() {
-        currentSpeed = 0;
-        System.out.println("bike \"" + brand + "\" was stopped;");
+        bikeCurrentSpeed = 0;
+        System.out.println("bike \"" + bikeBrand + "\" was stopped;");
     }
 
     public void increasePrice(double price) {
-        price = priceBike + price;
+        price = priceIncrementUah + price;
         System.out.println("Price of bicycle after increase is " + price);
     }
 
@@ -59,23 +60,22 @@ public class Bicycle {
 
         //create first object with instance
         bike[2] = getInstance();
-        bike[2].setBrand("Ride1Up");
-        bike[2].setCurrentSpeed(16.2);
-        bike[2].setMaxSpeed(50);
-        bike[2].setType("Roads");
+        bike[2].setBikeBrand("Ride1Up");
+        bike[2].setBikeCurrentSpeed(16.2);
+        bike[2].setMaxBikeSpeed(50);
+        bike[2].setBikeType("Roads");
 
 
         //create second object with instance
         bike[3] = getInstance();
-        bike[3].setBrand("Marin Bikes");
-        bike[3].setCurrentSpeed(19.2);
-        bike[3].setMaxSpeed(45);
-        bike[3].setType("Roads");
+        bike[3].setBikeBrand("Marin Bikes");
+        bike[3].setBikeCurrentSpeed(19.2);
+        bike[3].setMaxBikeSpeed(45);
+        bike[3].setBikeType("Roads");
 
         for (int idx = 0; idx < bike.length; idx++) {
             System.out.println("Bike " + (idx + 1) + ": " + bike[idx].toString() + ";");
         }
-        bike[3].accelerate(10);
     }
 }
 

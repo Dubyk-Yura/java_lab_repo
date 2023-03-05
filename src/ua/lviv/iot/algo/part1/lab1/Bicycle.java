@@ -11,7 +11,6 @@ import lombok.ToString;
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString
-
 public class Bicycle {
     private static final double priceBike = 10000; //price in UAH
     private String type;

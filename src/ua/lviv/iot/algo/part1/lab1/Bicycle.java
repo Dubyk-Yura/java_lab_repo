@@ -12,7 +12,7 @@ import lombok.ToString;
 @AllArgsConstructor
 @ToString
 public class Bicycle {
-    private static final double priceBike = 10000; //price in UAH
+    private static final double priceIncrementUah = 10000;
     private String type;
     private String brand;
     private double maxSpeed;// max speed in m/s

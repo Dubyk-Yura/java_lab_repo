@@ -19,7 +19,6 @@ public class Bicycle {
     private double bikeCurrentSpeed;
     private static Bicycle instance;
 
-
     public static Bicycle getInstance() {
         if (instance == null) {
             return new Bicycle();
@@ -47,7 +46,6 @@ public class Bicycle {
         System.out.println("Price of bicycle after increase is " + price);
     }
 
-
     public static void main(String[] args) {
         Bicycle[] bike = new Bicycle[4];
 
@@ -63,7 +61,6 @@ public class Bicycle {
         bike[2].setBikeCurrentSpeed(16.2);
         bike[2].setMaxBikeSpeed(50);
         bike[2].setBikeType("Roads");
-
 
         //create second object with instance
         bike[3] = getInstance();

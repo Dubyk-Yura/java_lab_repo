@@ -12,12 +12,13 @@ import lombok.ToString;
 @AllArgsConstructor
 @ToString
 public class Bicycle {
-    private static final double priceIncrementUah = 10000;
+    private static double priceIncrementUah = 10000;
     private String bikeType;
     private String bikeBrand;
     private double maxBikeSpeed;// max speed in m/s
     private double bikeCurrentSpeed;
     private static Bicycle instance;
+
 
     public static Bicycle getInstance() {
         if (instance == null) {
@@ -45,9 +46,15 @@ public class Bicycle {
         price = priceIncrementUah + price;
         System.out.println("Price of bicycle after increase is " + price);
     }
+    @Override
+    public String toString() {
+        return "Bicycle type " + bikeType + ", bike brand - \"" + bikeBrand + "\", maximum bike speed = " + maxBikeSpeed + ", bike current speed = " + bikeCurrentSpeed ;
+    }
+
 
     public static void main(String[] args) {
         Bicycle[] bike = new Bicycle[4];
+        Bicycle b = new Bicycle();
 
         //Create with default constructor
         bike[0] = new Bicycle();
@@ -61,6 +68,7 @@ public class Bicycle {
         bike[2].setBikeCurrentSpeed(16.2);
         bike[2].setMaxBikeSpeed(50);
         bike[2].setBikeType("Roads");
+
 
         //create second object with instance
         bike[3] = getInstance();

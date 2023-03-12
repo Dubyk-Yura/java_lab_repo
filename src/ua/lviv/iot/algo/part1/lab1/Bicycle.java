@@ -68,7 +68,6 @@ public class Bicycle {
         bike[2].setMaxBikeSpeed(50);
         bike[2].setBikeType("Roads");
 
-
         //create second object with instance
         bike[3] = getInstance();
         bike[3].setBikeBrand("Marin Bikes");

@@ -19,7 +19,6 @@ public class Bicycle {
     private double bikeCurrentSpeed;
     private static Bicycle instance;
 
-
     public static Bicycle getInstance() {
         if (instance == null) {
             return new Bicycle();

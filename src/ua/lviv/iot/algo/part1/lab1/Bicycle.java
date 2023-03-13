@@ -19,6 +19,7 @@ public class Bicycle {
     private double bikeCurrentSpeed;
     private static Bicycle instance;
 
+
     public static Bicycle getInstance() {
         if (instance == null) {
             return new Bicycle();
@@ -45,11 +46,6 @@ public class Bicycle {
         price = priceIncrementUah + price;
         System.out.println("Price of bicycle after increase is " + price);
     }
-    @Override
-    public String toString() {
-        return "Bicycle type " + bikeType + ", bike brand - \"" + bikeBrand + "\", maximum bike speed = " + maxBikeSpeed + ", bike current speed = " + bikeCurrentSpeed ;
-    }
-
 
     public static void main(String[] args) {
         Bicycle[] bike = new Bicycle[4];
@@ -60,23 +56,14 @@ public class Bicycle {
 
         //Create with all args constructor
         bike[1] = new Bicycle("mountain", "Kona", 40.0, 14.6);
-
         //create first object with instance
         bike[2] = getInstance();
-        bike[2].setBikeBrand("Ride1Up");
-        bike[2].setBikeCurrentSpeed(16.2);
-        bike[2].setMaxBikeSpeed(50);
-        bike[2].setBikeType("Roads");
-
         //create second object with instance
         bike[3] = getInstance();
-        bike[3].setBikeBrand("Marin Bikes");
-        bike[3].setBikeCurrentSpeed(19.2);
-        bike[3].setMaxBikeSpeed(45);
-        bike[3].setBikeType("Roads");
 
-        for (int idx = 0; idx < bike.length; idx++) {
-            System.out.println("Bike " + (idx + 1) + ": " + bike[idx].toString() + ";");
+
+        for (Bicycle i:bike ) {
+            System.out.println(i);
         }
     }
 }

@@ -48,22 +48,18 @@ public class Bicycle {
     }
 
     public static void main(String[] args) {
-        Bicycle[] bike = new Bicycle[4];
-        Bicycle b = new Bicycle();
-
+        var bicycles = new Bicycle[4];
         //Create with default constructor
-        bike[0] = new Bicycle();
-
+        bicycles[0] = new Bicycle();
         //Create with all args constructor
-        bike[1] = new Bicycle("mountain", "Kona", 40.0, 14.6);
+        bicycles[1] = new Bicycle("mountain", "Kona", 40.0, 14.6);
         //create first object with instance
-        bike[2] = getInstance();
+        bicycles[2] = getInstance();
         //create second object with instance
-        bike[3] = getInstance();
+        bicycles[3] = getInstance();
 
-
-        for (Bicycle i:bike ) {
-            System.out.println(i);
+        for (Bicycle bicycle : bicycles) {
+            System.out.println(bicycle);
         }
     }
 }

@@ -58,7 +58,6 @@ public class Bicycle {
         //create second object with instance
         bicycles[3] = getInstance();
 
-
         for (Bicycle bicycle : bicycles) {
             System.out.println(bicycle);
         }

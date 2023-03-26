@@ -3,10 +3,11 @@ package ua.lviv.iot.algo.part1.lab2;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
+
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString(callSuper = true)
-public class Unicycle extends  AbstractBicycle{
+public class Unicycle extends AbstractBicycle {
     private int seatLiftHeightInMeter;
     private int wheelRadius;
 

@@ -1,9 +1,9 @@
 package ua.lviv.iot.algo.part1.lab2;
 
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
+import lombok.ToString;
 
-@Setter
-@Getter
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString(callSuper = true)

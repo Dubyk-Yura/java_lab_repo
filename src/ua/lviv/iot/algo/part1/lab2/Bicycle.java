@@ -8,7 +8,6 @@ import lombok.ToString;
 @AllArgsConstructor
 @ToString(callSuper = true)
 public class Bicycle extends AbstractBicycle {
-    private static double priceIncrementUah = 10000;
     private String bikeType;
 
     @Override

@@ -16,7 +16,8 @@ public class Unicycle extends AbstractBicycle {
         return 0.1F;
     }
 
-    public Unicycle(String bikeBrand, int bikeMaxSpeedInMPH, int bikeCurrentSpeedInMPH, int seatLiftHeightInMeter, int wheelRadius) {
+    public Unicycle(String bikeBrand, int bikeMaxSpeedInMPH, int bikeCurrentSpeedInMPH,
+                    int seatLiftHeightInMeter, int wheelRadius) {
         super(bikeBrand, bikeMaxSpeedInMPH, bikeCurrentSpeedInMPH);
         this.seatLiftHeightInMeter = seatLiftHeightInMeter;
         this.wheelRadius = wheelRadius;

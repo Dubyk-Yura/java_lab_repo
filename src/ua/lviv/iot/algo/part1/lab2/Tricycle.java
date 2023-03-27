@@ -16,7 +16,8 @@ public class Tricycle extends AbstractBicycle {
         return 0;
     }
 
-    public Tricycle(String bikeBrand, int bikeMaxSpeedInMPH, int bikeCurrentSpeedInMPH, boolean withTrunk, float rareWheelDistanceInCentimeter) {
+    public Tricycle(String bikeBrand, int bikeMaxSpeedInMPH, int bikeCurrentSpeedInMPH,
+                    boolean withTrunk, float rareWheelDistanceInCentimeter) {
         super(bikeBrand, bikeMaxSpeedInMPH, bikeCurrentSpeedInMPH);
         this.withTrunk = withTrunk;
         this.rareWheelDistanceInCentimeter = rareWheelDistanceInCentimeter;

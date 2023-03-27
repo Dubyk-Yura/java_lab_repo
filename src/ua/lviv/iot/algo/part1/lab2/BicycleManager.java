@@ -41,14 +41,14 @@ public class BicycleManager {
         }
 
         System.out.println("\n\nPrint with sort by maximum speed -> ");
-        var bicycle1 = bicycleManager.findAllWithMaxSpeedHigherThan(10);
-        for (AbstractBicycle bicycles : bicycle1) {
+        var bicycleSpeedGraterThen10 = bicycleManager.findAllWithMaxSpeedHigherThan(10);
+        for (AbstractBicycle bicycles : bicycleSpeedGraterThen10) {
             System.out.println(bicycles);
         }
 
         System.out.println("\n\nPrint with sort by current speed -> ");
-        var bicycle2 = bicycleManager.findAllWithCurrentSpeedLowerThan(15);
-        for (AbstractBicycle bicycles : bicycle2) {
+        var bicycleSpeedLessThen15 = bicycleManager.findAllWithCurrentSpeedLowerThan(15);
+        for (AbstractBicycle bicycles : bicycleSpeedLessThen15) {
             System.out.println(bicycles);
         }
     }

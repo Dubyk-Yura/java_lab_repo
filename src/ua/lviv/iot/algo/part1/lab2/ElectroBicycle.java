@@ -7,18 +7,19 @@ import lombok.ToString;
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString(callSuper = true)
-public class ElectroBicycle extends AbstractBicycle{
+public class ElectroBicycle extends AbstractBicycle {
     private int bikeBatteryCapacityInmAh;
-    private float bikeChargeConsumptionFor100m;
+    private float bikeConsumptionPer100m;
 
     @Override
     float getMaxDistanceInKM() {
-        return bikeBatteryCapacityInmAh/bikeChargeConsumptionFor100m;
+        return bikeBatteryCapacityInmAh / bikeConsumptionPer100m;
     }
 
-    public ElectroBicycle(String bikeBrand, int bikeMaxSpeedInMPH, int bikeCurrentSpeedInMPH, int bikeBatteryCapacityInmAh, float bikeChargeConsumptionFor100m) {
+    public ElectroBicycle(String bikeBrand, int bikeMaxSpeedInMPH, int bikeCurrentSpeedInMPH,
+                          int bikeBatteryCapacityInmAh, float bikeConsumptionPer100m) {
         super(bikeBrand, bikeMaxSpeedInMPH, bikeCurrentSpeedInMPH);
         this.bikeBatteryCapacityInmAh = bikeBatteryCapacityInmAh;
-        this.bikeChargeConsumptionFor100m = bikeChargeConsumptionFor100m;
+        this.bikeConsumptionPer100m = bikeConsumptionPer100m;
     }
 }

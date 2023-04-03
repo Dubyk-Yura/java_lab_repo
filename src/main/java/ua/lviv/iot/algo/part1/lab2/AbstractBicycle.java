@@ -14,7 +14,6 @@ public abstract class AbstractBicycle {
     private int bikeMaxSpeedInMPH;
     private int bikeCurrentSpeedInMPH;
 
-    abstract float getMaxDistanceInKM();
-
+    protected abstract float getMaxDistanceInKM();
 
 }

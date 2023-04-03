@@ -3,16 +3,17 @@ package ua.lviv.iot.algo.part1.lab2;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
-
+import lombok.Getter;
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString(callSuper = true)
+@Getter
 public class Tricycle extends AbstractBicycle {
     private boolean withTrunk;
     private float rareWheelDistanceInCentimeter;
 
     @Override
-    float getMaxDistanceInKM() {
+    public float getMaxDistanceInKM() {
         return 0;
     }
 

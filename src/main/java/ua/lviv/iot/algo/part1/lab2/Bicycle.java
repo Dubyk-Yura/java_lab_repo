@@ -3,15 +3,17 @@ package ua.lviv.iot.algo.part1.lab2;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
+import lombok.Getter;
 
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString(callSuper = true)
+@Getter
 public class Bicycle extends AbstractBicycle {
     private String bikeType;
 
     @Override
-    float getMaxDistanceInKM() {
+    public float getMaxDistanceInKM() {
         return Integer.MAX_VALUE;
     }
 
@@ -19,5 +21,6 @@ public class Bicycle extends AbstractBicycle {
         super(bikeBrand, bikeMaxSpeedInMPH, bikeCurrentSpeedInMPH);
         this.bikeType = bikeType;
     }
+
 }
 

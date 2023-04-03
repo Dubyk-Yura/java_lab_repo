@@ -1,5 +1,5 @@
 import org.junit.Test;
-import ua.lviv.iot.algo.part1.lab2.Tricycle;
+import ua.lviv.iot.algo.part1.lab3.Tricycle;
 
 import static org.junit.Assert.*;
 public class TricycleTest extends Tricycle {

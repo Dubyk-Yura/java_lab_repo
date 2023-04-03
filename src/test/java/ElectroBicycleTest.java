@@ -1,5 +1,5 @@
 import org.junit.Test;
-import ua.lviv.iot.algo.part1.lab2.ElectroBicycle;
+import ua.lviv.iot.algo.part1.lab3.ElectroBicycle;
 
 import static org.junit.Assert.*;
 public class ElectroBicycleTest extends ElectroBicycle {

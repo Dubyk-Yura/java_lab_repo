@@ -1,5 +1,5 @@
 import org.junit.Test;
-import ua.lviv.iot.algo.part1.lab2.Unicycle;
+import ua.lviv.iot.algo.part1.lab3.Unicycle;
 
 import static org.junit.Assert.*;
 public class UnicycleTest extends Unicycle {

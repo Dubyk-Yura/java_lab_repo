@@ -1,11 +1,11 @@
 import lombok.Getter;
 import org.junit.Test;
-import ua.lviv.iot.algo.part1.lab2.AbstractBicycle;
-import ua.lviv.iot.algo.part1.lab2.Bicycle;
-import ua.lviv.iot.algo.part1.lab2.BicycleManager;
-import ua.lviv.iot.algo.part1.lab2.ElectroBicycle;
-import ua.lviv.iot.algo.part1.lab2.Tricycle;
-import ua.lviv.iot.algo.part1.lab2.Unicycle;
+import ua.lviv.iot.algo.part1.lab3.AbstractBicycle;
+import ua.lviv.iot.algo.part1.lab3.Bicycle;
+import ua.lviv.iot.algo.part1.lab3.BicycleManager;
+import ua.lviv.iot.algo.part1.lab3.ElectroBicycle;
+import ua.lviv.iot.algo.part1.lab3.Tricycle;
+import ua.lviv.iot.algo.part1.lab3.Unicycle;
 
 import static org.junit.Assert.assertEquals;
 

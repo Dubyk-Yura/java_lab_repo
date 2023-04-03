@@ -17,7 +17,8 @@ public class Bicycle extends AbstractBicycle {
         return Integer.MAX_VALUE;
     }
 
-    public Bicycle(String bikeBrand, int bikeMaxSpeedInMPH, int bikeCurrentSpeedInMPH, String bikeType) {
+    public Bicycle(String bikeBrand, int bikeMaxSpeedInMPH,
+                   int bikeCurrentSpeedInMPH, String bikeType) {
         super(bikeBrand, bikeMaxSpeedInMPH, bikeCurrentSpeedInMPH);
         this.bikeType = bikeType;
     }

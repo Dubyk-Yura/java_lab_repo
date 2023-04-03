@@ -1,5 +1,4 @@
 import lombok.Getter;
-import org.junit.Test;
 import ua.lviv.iot.algo.part1.lab3.AbstractBicycle;
 import ua.lviv.iot.algo.part1.lab3.Bicycle;
 import ua.lviv.iot.algo.part1.lab3.BicycleManager;
@@ -7,6 +6,7 @@ import ua.lviv.iot.algo.part1.lab3.ElectroBicycle;
 import ua.lviv.iot.algo.part1.lab3.Tricycle;
 import ua.lviv.iot.algo.part1.lab3.Unicycle;
 
+import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 
 import java.util.ArrayList;

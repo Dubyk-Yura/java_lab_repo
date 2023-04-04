@@ -7,6 +7,7 @@ import ua.lviv.iot.algo.part1.lab3.Tricycle;
 import ua.lviv.iot.algo.part1.lab3.Unicycle;
 
 import org.junit.Test;
+
 import static org.junit.Assert.assertEquals;
 
 import java.util.ArrayList;
@@ -16,10 +17,8 @@ import java.util.stream.Collectors;
 @Getter
 public class BicycleManagerTest {
     final List<AbstractBicycle> bicycleList = new ArrayList<>();
+    final List<AbstractBicycle> bicycleList2 = new ArrayList<>();
 
-    public void addBicycle(final AbstractBicycle bicycle) {
-        this.bicycleList.add(bicycle);
-    }
 
     @Test
     public void testFindAllWithMaxSpeedHigherThan() {

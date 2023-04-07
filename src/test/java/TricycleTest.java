@@ -4,11 +4,11 @@ import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 
-public class TricycleTest extends Tricycle {
-    Tricycle bicycle = new Tricycle();
+public class TricycleTest {
+    Tricycle bicycle2 = new Tricycle();
 
     @Test
     public void testGetMaxDistanceInKM() {
-        assertEquals(0, bicycle.getMaxDistanceInKM(), 0.001F);
+        assertEquals(0, bicycle2.getMaxDistanceInKM(), 0.001F);
     }
 }

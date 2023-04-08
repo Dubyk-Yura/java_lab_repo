@@ -1,12 +1,10 @@
 package ua.lviv.iot.algo.part1.lab3;
 
-import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 import lombok.Getter;
 
 @NoArgsConstructor
-@AllArgsConstructor
 @ToString(callSuper = true)
 @Getter
 public class Bicycle extends AbstractBicycle {
@@ -17,10 +15,9 @@ public class Bicycle extends AbstractBicycle {
         return Integer.MAX_VALUE;
     }
 
-    public Bicycle(String bikeBrand, int bikeMaxSpeedInMPH, int bikeCurrentSpeedInMPH, String bikeType) {
+    public Bicycle(final String bikeBrand, final int bikeMaxSpeedInMPH,
+                   final int bikeCurrentSpeedInMPH, final String bikeType) {
         super(bikeBrand, bikeMaxSpeedInMPH, bikeCurrentSpeedInMPH);
         this.bikeType = bikeType;
     }
-
 }
-

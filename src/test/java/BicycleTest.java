@@ -1,11 +1,14 @@
-import org.junit.Test;
 import ua.lviv.iot.algo.part1.lab3.Bicycle;
 
-import static org.junit.Assert.*;
-public class BicycleTest extends Bicycle {
-    Bicycle bicycle = new Bicycle("Apple", 7, 4, "mountain");
+import org.junit.Test;
+
+import static org.junit.Assert.assertEquals;
+
+public class BicycleTest {
+    Bicycle bicycle = new Bicycle();
+
     @Test
-    public void testGetMaxDistanceInKM(){
-        assertEquals (Integer.MAX_VALUE,bicycle.getMaxDistanceInKM(),0.001F);
+    public void testGetMaxDistanceInKM() {
+        assertEquals(Integer.MAX_VALUE, bicycle.getMaxDistanceInKM(), 0.001F);
     }
 }

@@ -2,6 +2,7 @@ package ua.lviv.iot.algo.part1.lab3;
 
 import lombok.Getter;
 
+import java.io.PrintWriter;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -33,4 +34,18 @@ public class BicycleManager {
         return bicycleList;
     }
 
+    public static void main(String[] args) {
+        BicycleManager printWriter = new BicycleManager();
+        BicycleManager bicycleManager = new BicycleManager();
+        bicycleManager.addBicycle(new ElectroBicycle("Samsung", 30, 15, 50, 10));
+        bicycleManager.addBicycle(new ElectroBicycle("Electro", 25, 5, 60, 20));
+        bicycleManager.addBicycle(new Bicycle("Apple", 7, 4, "mountain"));
+        bicycleManager.addBicycle(new Bicycle("Xiaomi", 40, 39, "non-mountain"));
+        bicycleManager.addBicycle(new Unicycle("Uni-company", 3, 2, 2, 1));
+        bicycleManager.addBicycle(new Unicycle("Evil Company", 4, 1, 3, 2));
+        bicycleManager.addBicycle(new Tricycle("Tri-company", 10, 6, true, 0.8F));
+        bicycleManager.addBicycle(new Tricycle("Company", 14, 9, false, 0.9F));
+
+
+    }
 }

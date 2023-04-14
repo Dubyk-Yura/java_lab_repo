@@ -11,4 +11,11 @@ public class BicycleTest {
     public void testGetMaxDistanceInKM() {
         assertEquals(Integer.MAX_VALUE, bicycle.getMaxDistanceInKM(), 0.001F);
     }
+
+    @Test
+    public void testGetHeadersSmartly(){
+        Bicycle bicycle1 = new Bicycle();
+        System.out.println(bicycle1.getHeadersSmartly());
+
+    }
 }

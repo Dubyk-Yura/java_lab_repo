@@ -9,12 +9,21 @@ import lombok.Getter;
 @Getter
 
 public class Tricycle extends AbstractBicycle {
+    public static final String HEADERS = "withTrunk, wheelDistance";
     private boolean withTrunk;
     private float rareWheelDistanceInCentimeter;
 
     @Override
     public float getMaxDistanceInKM() {
         return 0;
+    }
+
+    public String getHeaders() {
+        return super.getHeaders() + ", " + HEADERS;
+    }
+
+    public String toCSV() {
+        return super.toCSV() + ", " + isWithTrunk() + ", " + getRareWheelDistanceInCentimeter();
     }
 
     public Tricycle(final String bikeBrand, final int bikeMaxSpeedInMPH, final int bikeCurrentSpeedInMPH,

@@ -7,28 +7,27 @@ import java.io.PrintWriter;
 import java.util.List;
 
 public class BicycleWriter {
-    String csvFile = "bicycle.csv";
+    String csvFile = String.format("%s%s%s%s%s", System.getProperty("user.dir"), File.separator, "src\\main\\resources", File.separator, "result.csv");
 
     public String write(List<AbstractBicycle> bicycles) {
         if (bicycles == null || bicycles.isEmpty()) {
             return null;
         }
-        String defaultFileName = "result.csv";
-        try (FileWriter writer = new FileWriter(defaultFileName)) {
-            for (var bicycle : bicycles) {
+
+        try (FileWriter writer = new FileWriter(csvFile)) {
+            for (AbstractBicycle bicycle: bicycles ) {
                 writer.write(bicycle.getHeaders());
 
                 writer.write("\r\n");
                 writer.write(bicycle.toCSV());
                 writer.write("\r\n");
             }
+
         } catch (IOException e) {
-
-        } finally {
-
+            e.fillInStackTrace();
         }
 
-        return defaultFileName;
+        return csvFile;
     }
 
 }

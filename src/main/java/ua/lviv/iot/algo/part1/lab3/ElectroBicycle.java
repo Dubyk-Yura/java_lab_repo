@@ -19,10 +19,12 @@ public class ElectroBicycle extends AbstractBicycle {
         return bikeBatteryCapacityInmAh / bikeConsumptionPer100m;
     }
 
+    @Override
     public String getHeaders() {
         return super.getHeaders() + ", " + HEADERS;
     }
 
+    @Override
     public String toCSV() {
         return super.toCSV() + ", " + getBikeBatteryCapacityInmAh() + ", " + getBikeConsumptionPer100m();
     }

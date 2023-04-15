@@ -18,10 +18,12 @@ public class Tricycle extends AbstractBicycle {
         return 0;
     }
 
+    @Override
     public String getHeaders() {
         return super.getHeaders() + ", " + HEADERS;
     }
 
+    @Override
     public String toCSV() {
         return super.toCSV() + ", " + isWithTrunk() + ", " + getRareWheelDistanceInCentimeter();
     }

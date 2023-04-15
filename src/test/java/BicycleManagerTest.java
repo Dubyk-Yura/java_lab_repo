@@ -52,7 +52,6 @@ public class BicycleManagerTest {
         assertTrue(realBikes.get(3).equalsObj(expectedBikes.get(2)));
         assertTrue(realBikes.get(0).equalsObj(expectedBikes.get(0)));
         assertTrue(realBikes.get(1).equalsObj(expectedBikes.get(1)));
-
     }
 
     @Test

@@ -17,10 +17,12 @@ public class Unicycle extends AbstractBicycle {
         return 0.1F;
     }
 
+    @Override
     public String getHeaders() {
         return super.getHeaders() + ", " + HEADERS;
     }
 
+    @Override
     public String toCSV() {
         return super.toCSV() + ", " + getSeatLiftHeightInMeter() + ", " + getWheelRadius();
     }

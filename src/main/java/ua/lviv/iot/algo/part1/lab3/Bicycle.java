@@ -18,10 +18,12 @@ public class Bicycle extends AbstractBicycle {
         return Integer.MAX_VALUE;
     }
 
+    @Override
     public String getHeaders() {
         return super.getHeaders() + ", " + HEADERS;
     }
 
+    @Override
     public String toCSV() {
         return super.toCSV() + ", " + getBikeType();
     }
@@ -30,23 +32,5 @@ public class Bicycle extends AbstractBicycle {
                    final int bikeCurrentSpeedInMPH, final String bikeType) {
         super(bikeBrand, bikeMaxSpeedInMPH, bikeCurrentSpeedInMPH);
         this.bikeType = bikeType;
-    }
-
-    public String getHeadersSmartly() {// треба дописати (проблема що бере публічне поле)(13 рядок )
-        Class<? extends Bicycle> clazz = this.getClass();
-        try{
-            String result = "";
-           Field[] fields = clazz.getFields();
-            for (var field:fields) {
-                result += field.getName();
-            }
-        }
-        catch (Exception  e){ //виконується якщо в try виникли помилки
-            e.printStackTrace();
-        } finally {//виконується завжди
-
-        }
-        return null;
-
     }
 }

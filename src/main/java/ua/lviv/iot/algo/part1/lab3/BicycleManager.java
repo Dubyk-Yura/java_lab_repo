@@ -35,7 +35,7 @@ public class BicycleManager {
     }
 
     public static void main(String[] args) {
-        BicycleWriter bicycleWriter = new BicycleWriter();
+      BicycleWriter bicycleWriter = new BicycleWriter();
         List<AbstractBicycle> bicycleManager = new LinkedList<>();
         bicycleManager.add(new ElectroBicycle("Samsung", 30, 15, 50, 10));
         bicycleManager.add(new ElectroBicycle("Electro", 25, 5, 60, 20));
@@ -46,8 +46,6 @@ public class BicycleManager {
         bicycleManager.add(new Tricycle("Tri-company", 10, 6, true, 0.8F));
         bicycleManager.add(new Tricycle("Company", 14, 9, false, 0.9F));
 
-        bicycleWriter.write(bicycleManager);
-
-        System.out.println(bicycleWriter.getClass());
+       bicycleWriter.sortedWrite(bicycleManager);
     }
 }

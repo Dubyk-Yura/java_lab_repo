@@ -1,4 +1,4 @@
-import ua.lviv.iot.algo.part1.lab3.ElectroBicycle;
+package ua.lviv.iot.algo.part1.lab3;
 
 import org.junit.Test;
 

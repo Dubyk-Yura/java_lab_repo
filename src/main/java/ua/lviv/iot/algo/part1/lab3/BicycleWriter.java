@@ -1,14 +1,15 @@
 package ua.lviv.iot.algo.part1.lab3;
 
-import java.io.File;
+
 import java.io.FileWriter;
 import java.io.IOException;
-import java.io.PrintWriter;
+
 import java.nio.file.Paths;
 import java.util.*;
 
 public class BicycleWriter {
     String csvFile = Paths.get(System.getProperty("user.dir"), "src", "main", "resources", "result.csv").toString();
+    String sortedCsvFile = Paths.get(System.getProperty("user.dir"), "src", "main", "resources", "sortedResult.csv").toString();
 
     public String write(List<AbstractBicycle> bicycles) {
         if (bicycles == null || bicycles.isEmpty()) {
@@ -48,7 +49,7 @@ public class BicycleWriter {
         if (bicycles == null || bicycles.isEmpty()) {
             return null;
         }
-        try (FileWriter writer = new FileWriter(csvFile)) {
+        try (FileWriter writer = new FileWriter(sortedCsvFile)) {
             Set<String> keys = sortedList.keySet();
             for (AbstractBicycle bicycle : bicycles) {
                 for (String key : keys) {
@@ -70,6 +71,6 @@ public class BicycleWriter {
         } catch (IOException e) {
             e.fillInStackTrace();
         }
-        return csvFile;
+        return sortedCsvFile;
     }
 }

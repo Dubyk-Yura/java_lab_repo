@@ -46,6 +46,8 @@ public class BicycleManager {
         bicycleManager.add(new Tricycle("Tri-company", 10, 6, true, 0.8F));
         bicycleManager.add(new Tricycle("Company", 14, 9, false, 0.9F));
 
+       bicycleWriter.write(bicycleManager);
        bicycleWriter.sortedWrite(bicycleManager);
+
     }
 }

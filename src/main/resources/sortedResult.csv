@@ -1,0 +1,12 @@
+bikeBrand, maxSpeed, currentSpeed, seatLiftHeightInMeter, wheelRadius
+Uni-company, 3, 2, 2, 1
+Evil Company, 4, 1, 3, 2
+bikeBrand, maxSpeed, currentSpeed, bikeType
+Apple, 7, 4, mountain
+Xiaomi, 40, 39, non-mountain
+bikeBrand, maxSpeed, currentSpeed, batteryCapacity, consumption
+Samsung, 30, 15, 50, 10.0
+Electro, 25, 5, 60, 20.0
+bikeBrand, maxSpeed, currentSpeed, withTrunk, wheelDistance
+Tri-company, 10, 6, true, 0.8
+Company, 14, 9, false, 0.9

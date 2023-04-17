@@ -9,6 +9,6 @@ public class TricycleTest {
 
     @Test
     public void testGetMaxDistanceInKM() {
-        assertEquals(0, bicycle2.getMaxDistanceInKM(), 0.001F);
+        assertEquals(0, bicycle2.getMaxDistanceInKm(), 0.001F);
     }
 }

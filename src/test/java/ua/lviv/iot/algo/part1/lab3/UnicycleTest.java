@@ -10,6 +10,6 @@ public class UnicycleTest {
 
     @Test
     public void testGetMaxDistanceInKM() {
-        assertEquals(0.1F, bicycle.getMaxDistanceInKM(), 0.001F);
+        assertEquals(0.1F, bicycle.getMaxDistanceInKm(), 0.001F);
     }
 }

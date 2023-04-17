@@ -12,23 +12,23 @@ import lombok.ToString;
 public abstract class AbstractBicycle {
     public static final String HEADERS = "bikeBrand, maxSpeed, currentSpeed";
     private String bikeBrand;
-    private int bikeMaxSpeedInMPH;
-    private int bikeCurrentSpeedInMPH;
+    private int bikeMaxSpeedInMph;
+    private int bikeCurrentSpeedInMph;
 
-    protected abstract float getMaxDistanceInKM();
+    protected abstract float getMaxDistanceInKm();
 
     public String getHeaders() {
         return HEADERS;
     }
 
-    public String toCSV() {
-        return getBikeBrand() + ", " + getBikeMaxSpeedInMPH() + ", " + getBikeCurrentSpeedInMPH();
+    public String toCsv() {
+        return getBikeBrand() + ", " + getBikeMaxSpeedInMph() + ", " + getBikeCurrentSpeedInMph();
     }
 
 
     public boolean equalsObj(AbstractBicycle obj) {
         return this.getBikeBrand().equals(obj.getBikeBrand())
-                && this.getBikeMaxSpeedInMPH() == obj.getBikeMaxSpeedInMPH()
-                && this.getBikeCurrentSpeedInMPH() == obj.getBikeCurrentSpeedInMPH();
+                && this.getBikeMaxSpeedInMph() == obj.getBikeMaxSpeedInMph()
+                && this.getBikeCurrentSpeedInMph() == obj.getBikeCurrentSpeedInMph();
     }
 }

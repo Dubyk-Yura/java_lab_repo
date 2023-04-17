@@ -13,7 +13,7 @@ public class Unicycle extends AbstractBicycle {
     private int wheelRadius;
 
     @Override
-    public float getMaxDistanceInKM() {
+    public float getMaxDistanceInKm() {
         return 0.1F;
     }
 
@@ -23,13 +23,14 @@ public class Unicycle extends AbstractBicycle {
     }
 
     @Override
-    public String toCSV() {
-        return super.toCSV() + ", " + getSeatLiftHeightInMeter() + ", " + getWheelRadius();
+    public String toCsv() {
+        return super.toCsv() + ", " + getSeatLiftHeightInMeter() + ", " + getWheelRadius();
     }
 
-    public Unicycle(final String bikeBrand, final int bikeMaxSpeedInMPH, final int bikeCurrentSpeedInMPH,
+    public Unicycle(final String bikeBrand, final int bikeMaxSpeedInMph,
+                    final int bikeCurrentSpeedInMph,
                     final int seatLiftHeightInMeter, final int wheelRadius) {
-        super(bikeBrand, bikeMaxSpeedInMPH, bikeCurrentSpeedInMPH);
+        super(bikeBrand, bikeMaxSpeedInMph, bikeCurrentSpeedInMph);
         this.seatLiftHeightInMeter = seatLiftHeightInMeter;
         this.wheelRadius = wheelRadius;
     }

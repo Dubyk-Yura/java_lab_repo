@@ -9,6 +9,6 @@ public class BicycleTest {
 
     @Test
     public void testGetMaxDistanceInKM() {
-        assertEquals(Integer.MAX_VALUE, bicycle.getMaxDistanceInKM(), 0.001F);
+        assertEquals(Integer.MAX_VALUE, bicycle.getMaxDistanceInKm(), 0.001F);
     }
 }

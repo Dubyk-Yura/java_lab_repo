@@ -1,15 +1,21 @@
 package ua.lviv.iot.algo.part1.lab3;
 
-
 import java.io.FileWriter;
 import java.io.IOException;
 
 import java.nio.file.Paths;
-import java.util.*;
+import java.util.HashMap;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
 
 public class BicycleWriter {
-    String csvFile = Paths.get(System.getProperty("user.dir"), "src", "main", "resources", "result.csv").toString();
-    String sortedCsvFile = Paths.get(System.getProperty("user.dir"), "src", "main", "resources", "sortedResult.csv").toString();
+    String csvFile = Paths.get(System.getProperty("user.dir"),
+            "src", "main", "resources", "result.csv").toString();
+    String sortedCsvFile =
+            Paths.get(System.getProperty("user.dir"),
+                    "src", "main", "resources", "sortedResult.csv").toString();
 
     public String write(List<AbstractBicycle> bicycles) {
         if (bicycles == null || bicycles.isEmpty()) {
@@ -25,7 +31,7 @@ public class BicycleWriter {
                     writer.write(bicycle.getHeaders());
                     writer.write(System.lineSeparator());
                 }
-                writer.write(bicycle.toCSV());
+                writer.write(bicycle.toCsv());
                 writer.write(System.lineSeparator());
             }
 
@@ -63,7 +69,7 @@ public class BicycleWriter {
                 writer.write(sortedList.get(key).get(1).getHeaders());
                 writer.write(System.lineSeparator());
                 for (int i = 0; i < sortedList.get(key).size(); i++) {
-                    writer.write(sortedList.get(key).get(i).toCSV());
+                    writer.write(sortedList.get(key).get(i).toCsv());
                     writer.write(System.lineSeparator());
                 }
             }

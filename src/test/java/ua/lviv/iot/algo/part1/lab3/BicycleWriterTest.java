@@ -1,4 +1,5 @@
 package ua.lviv.iot.algo.part1.lab3;
+
 import org.junit.After;
 import org.junit.Before;
 
@@ -16,9 +17,11 @@ import java.util.List;
 
 public class BicycleWriterTest {
     private static final String RESULT_FILENAME = Paths.get(System
-            .getProperty("user.dir"), "src", "main", "resources", "result.csv").toString();
+                    .getProperty("user.dir"), "src", "main", "resources", "result.csv")
+            .toString();
     private static final String EXPECTED_FILENAME = Paths.get(System
-            .getProperty("user.dir"), "src", "main", "resources", "expected.csv").toString();
+                    .getProperty("user.dir"), "src", "main", "resources",
+            "expected.csv").toString();
     private File expectedFile;
     private List<AbstractBicycle> bicycles;
     private BicycleWriter writer;

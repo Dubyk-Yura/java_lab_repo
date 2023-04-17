@@ -14,7 +14,7 @@ public class Tricycle extends AbstractBicycle {
     private float rareWheelDistanceInCentimeter;
 
     @Override
-    public float getMaxDistanceInKM() {
+    public float getMaxDistanceInKm() {
         return 0;
     }
 
@@ -24,13 +24,15 @@ public class Tricycle extends AbstractBicycle {
     }
 
     @Override
-    public String toCSV() {
-        return super.toCSV() + ", " + isWithTrunk() + ", " + getRareWheelDistanceInCentimeter();
+    public String toCsv() {
+        return super.toCsv() + ", " + isWithTrunk() + ", " + getRareWheelDistanceInCentimeter();
     }
 
-    public Tricycle(final String bikeBrand, final int bikeMaxSpeedInMPH, final int bikeCurrentSpeedInMPH,
-                    final boolean withTrunk, final float rareWheelDistanceInCentimeter) {
-        super(bikeBrand, bikeMaxSpeedInMPH, bikeCurrentSpeedInMPH);
+    public Tricycle(final String bikeBrand, final int bikeMaxSpeedInMph,
+                    final int bikeCurrentSpeedInMph,
+                    final boolean withTrunk,
+                    final float rareWheelDistanceInCentimeter) {
+        super(bikeBrand, bikeMaxSpeedInMph, bikeCurrentSpeedInMph);
         this.withTrunk = withTrunk;
         this.rareWheelDistanceInCentimeter = rareWheelDistanceInCentimeter;
     }

@@ -36,10 +36,10 @@ public class BicycleWriter {
 
     public String sortedWrite(List<AbstractBicycle> bicycles) {
         Map<String, List<AbstractBicycle>> sortedList = new HashMap<>();
-        String bicycleKey = "class ua.lviv.iot.algo.part1.lab3.Bicycle";
-        String electroBicycleKey = "class ua.lviv.iot.algo.part1.lab3.ElectroBicycle";
-        String tricycleKey = "class ua.lviv.iot.algo.part1.lab3.Tricycle";
-        String unicycleKey = "class ua.lviv.iot.algo.part1.lab3.Unicycle";
+        String bicycleKey = Bicycle.class.toString();
+        String electroBicycleKey = ElectroBicycle.class.toString();
+        String tricycleKey = Tricycle.class.toString();
+        String unicycleKey = Unicycle.class.toString();
         sortedList.put(bicycleKey, new LinkedList<>());
         sortedList.put(electroBicycleKey, new LinkedList<>());
         sortedList.put(tricycleKey, new LinkedList<>());

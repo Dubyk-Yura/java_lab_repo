@@ -41,6 +41,7 @@ public class BicycleWriter {
         return csvFile;
     }
 
+    @lombok.Generated
     public String sortedWrite(List<AbstractBicycle> bicycles) {
         Map<String, List<AbstractBicycle>> sortedList = new HashMap<>();
         String bicycleKey = Bicycle.class.toString();

@@ -1,5 +1,6 @@
 package ua.lviv.iot.algo.part1.lab3;
 
+import lombok.Generated;
 import lombok.Getter;
 
 import java.util.LinkedList;
@@ -34,6 +35,7 @@ public class BicycleManager {
         return BicycleManager.bicycleList;
     }
 
+    @lombok.Generated
     public static void main(String[] args) {
         final BicycleWriter bicycleWriter = new BicycleWriter();
         List<AbstractBicycle> bicycleManager = new LinkedList<>();

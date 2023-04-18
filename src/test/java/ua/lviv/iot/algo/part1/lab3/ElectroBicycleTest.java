@@ -14,5 +14,14 @@ public class ElectroBicycleTest {
                         bicycle.getBikeConsumptionPer100m(),
                 bicycle.getMaxDistanceInKm(), 0.001F);
     }
+    @Test
+    public void testHeaders() {
+        assertEquals("bikeBrand, maxSpeed, currentSpeed, batteryCapacity, consumption", bicycle.getHeaders());
+    }
+
+    @Test
+    public void testToCsv() {
+        assertEquals("Electro, 25, 5, 60, 20.0", bicycle.toCsv());
+    }
 
 }

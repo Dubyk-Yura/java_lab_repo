@@ -12,4 +12,13 @@ public class UnicycleTest {
     public void testGetMaxDistanceInKM() {
         assertEquals(0.1F, bicycle.getMaxDistanceInKm(), 0.001F);
     }
+    @Test
+    public void testHeaders() {
+        assertEquals("bikeBrand, maxSpeed, currentSpeed, seatLiftHeightInMeter, wheelRadius", bicycle.getHeaders());
+    }
+
+    @Test
+    public void testToCsv() {
+        assertEquals("Uni-company, 3, 2, 2, 1", bicycle.toCsv());
+    }
 }

@@ -11,9 +11,9 @@ import java.util.Map;
 import java.util.Set;
 
 public class BicycleWriter {
-    String csvFile = Paths.get(System.getProperty("user.dir"),
+    final static String CSVFILE = Paths.get(System.getProperty("user.dir"),
             "src", "main", "resources", "result.csv").toString();
-    String sortedCsvFile =
+    final static String SORTEDCSVFILE =
             Paths.get(System.getProperty("user.dir"),
                     "src", "main", "resources", "sortedResult.csv").toString();
 
@@ -21,7 +21,7 @@ public class BicycleWriter {
         if (bicycles == null || bicycles.isEmpty()) {
             return null;
         }
-        try (FileWriter writer = new FileWriter(csvFile)) {
+        try (FileWriter writer = new FileWriter(CSVFILE)) {
             AbstractBicycle tempObj = bicycles.get(0);
             writer.write(bicycles.get(0).getHeaders());
             writer.write(System.lineSeparator());
@@ -38,7 +38,7 @@ public class BicycleWriter {
         } catch (IOException e) {
             e.fillInStackTrace();
         }
-        return csvFile;
+        return CSVFILE;
     }
 
     @lombok.Generated
@@ -56,7 +56,7 @@ public class BicycleWriter {
         if (bicycles == null || bicycles.isEmpty()) {
             return null;
         }
-        try (FileWriter writer = new FileWriter(sortedCsvFile)) {
+        try (FileWriter writer = new FileWriter(SORTEDCSVFILE)) {
             Set<String> keys = sortedList.keySet();
             for (AbstractBicycle bicycle : bicycles) {
                 for (String key : keys) {
@@ -78,6 +78,6 @@ public class BicycleWriter {
         } catch (IOException e) {
             e.fillInStackTrace();
         }
-        return sortedCsvFile;
+        return SORTEDCSVFILE;
     }
 }

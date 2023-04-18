@@ -49,25 +49,32 @@ public class BicycleWriterTest {
         Files.deleteIfExists(Path.of(RESULT_FILENAME));
     }
 
-    @Test
+    @Test //compares whether the expected file matches the current one
     public void testWriteListOfBicycles() throws IOException {
-        writer.write(bicycles);
+        writer.write(bicycles, RESULT_FILENAME);
         Path expected = expectedFile.toPath();
         Path actual = result.toPath();
         Assertions.assertEquals(-1L, Files.mismatch(expected, actual));
     }
 
-    @Test
-    public void testEmptyWrite() throws IOException {
-        writer.write(null);
+    @Test //we check if the file exists after transferring to it null
+    public void testEmptyWrite() {
+        writer.write(null, RESULT_FILENAME);
         Assertions.assertFalse(result.exists());
     }
 
-    @Test
+    @Test //we check if the file exists after transferring to it empty list
+    public void testEmptyListWrite() {
+        List<AbstractBicycle> tempBicycle = new LinkedList<>();
+        writer.write(tempBicycle, RESULT_FILENAME);
+        Assertions.assertFalse(result.exists());
+    }
+
+    @Test //checks whether new lines are added to the existing ones
     public void testFileOverride() throws IOException {
         List<AbstractBicycle> tempBicycle = new LinkedList<>();
         tempBicycle.add(new Tricycle("Company", 14, 9, false, 0.9F));
-        writer.write(tempBicycle);
+        writer.write(tempBicycle, RESULT_FILENAME);
         testWriteListOfBicycles();
     }
 }

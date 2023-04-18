@@ -2,6 +2,7 @@ package ua.lviv.iot.algo.part1.lab3;
 
 import lombok.Getter;
 
+import java.nio.file.Paths;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -9,6 +10,10 @@ import java.util.stream.Collectors;
 @Getter
 
 public class BicycleManager {
+    static final String csvFile = Paths.get(System.getProperty("user.dir"),
+            "src", "main", "resources", "result.csv").toString();
+    static final String sortedCsvFile = Paths.get(System.getProperty("user.dir"),
+            "src", "main", "resources", "sortedResult.csv").toString();
     static final List<AbstractBicycle> bicycleList = new LinkedList<>();
 
     public List<AbstractBicycle> findAllWithMaxSpeedHigherThan(int maxSpeed) {
@@ -47,8 +52,8 @@ public class BicycleManager {
         bicycleManager.add(new Tricycle("Tri-company", 10, 6, true, 0.8F));
         bicycleManager.add(new Tricycle("Company", 14, 9, false, 0.9F));
 
-        bicycleWriter.write(bicycleManager);
-        bicycleWriter.sortedWrite(bicycleManager);
+        bicycleWriter.write(bicycleManager, csvFile);
+        bicycleWriter.sortedWrite(bicycleManager, sortedCsvFile);
 
     }
 }

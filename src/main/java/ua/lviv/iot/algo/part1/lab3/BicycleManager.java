@@ -1,6 +1,5 @@
 package ua.lviv.iot.algo.part1.lab3;
 
-import lombok.Generated;
 import lombok.Getter;
 
 import java.util.LinkedList;

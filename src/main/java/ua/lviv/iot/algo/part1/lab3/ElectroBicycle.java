@@ -9,17 +9,32 @@ import lombok.Getter;
 @Getter
 
 public class ElectroBicycle extends AbstractBicycle {
+    public static final String HEADERS = "batteryCapacity, consumption";
+
     private int bikeBatteryCapacityInmAh;
     private float bikeConsumptionPer100m;
 
     @Override
-    public float getMaxDistanceInKM() {
+    public float getMaxDistanceInKm() {
         return bikeBatteryCapacityInmAh / bikeConsumptionPer100m;
     }
 
-    public ElectroBicycle(final String bikeBrand, final int bikeMaxSpeedInMPH, final int bikeCurrentSpeedInMPH,
-                          final int bikeBatteryCapacityInmAh, final int bikeConsumptionPer100m) {
-        super(bikeBrand, bikeMaxSpeedInMPH, bikeCurrentSpeedInMPH);
+    @Override
+    public String getHeaders() {
+        return super.getHeaders() + ", " + HEADERS;
+    }
+
+    @Override
+    public String toCsv() {
+        return super.toCsv() + ", " + getBikeBatteryCapacityInmAh() + ", "
+                + getBikeConsumptionPer100m();
+    }
+
+    public ElectroBicycle(final String bikeBrand, final int bikeMaxSpeedInMph,
+                          final int bikeCurrentSpeedInMph,
+                          final int bikeBatteryCapacityInmAh,
+                          final int bikeConsumptionPer100m) {
+        super(bikeBrand, bikeMaxSpeedInMph, bikeCurrentSpeedInMph);
         this.bikeBatteryCapacityInmAh = bikeBatteryCapacityInmAh;
         this.bikeConsumptionPer100m = bikeConsumptionPer100m;
     }

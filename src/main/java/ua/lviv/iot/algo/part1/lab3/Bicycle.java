@@ -8,16 +8,27 @@ import lombok.Getter;
 @ToString(callSuper = true)
 @Getter
 public class Bicycle extends AbstractBicycle {
+    public static final String HEADERS = "bikeType";
     private String bikeType;
 
     @Override
-    public float getMaxDistanceInKM() {
+    public float getMaxDistanceInKm() {
         return Integer.MAX_VALUE;
     }
 
-    public Bicycle(final String bikeBrand, final int bikeMaxSpeedInMPH,
-                   final int bikeCurrentSpeedInMPH, final String bikeType) {
-        super(bikeBrand, bikeMaxSpeedInMPH, bikeCurrentSpeedInMPH);
+    @Override
+    public String getHeaders() {
+        return super.getHeaders() + ", " + HEADERS;
+    }
+
+    @Override
+    public String toCsv() {
+        return super.toCsv() + ", " + getBikeType();
+    }
+
+    public Bicycle(final String bikeBrand, final int bikeMaxSpeedInMph,
+                   final int bikeCurrentSpeedInMph, final String bikeType) {
+        super(bikeBrand, bikeMaxSpeedInMph, bikeCurrentSpeedInMph);
         this.bikeType = bikeType;
     }
 }

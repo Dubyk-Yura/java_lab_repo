@@ -8,17 +8,29 @@ import lombok.ToString;
 @ToString(callSuper = true)
 @Getter
 public class Unicycle extends AbstractBicycle {
+    public static final String HEADERS = "seatLiftHeightInMeter, wheelRadius";
     private int seatLiftHeightInMeter;
     private int wheelRadius;
 
     @Override
-    public float getMaxDistanceInKM() {
+    public float getMaxDistanceInKm() {
         return 0.1F;
     }
 
-    public Unicycle(final String bikeBrand, final int bikeMaxSpeedInMPH, final int bikeCurrentSpeedInMPH,
+    @Override
+    public String getHeaders() {
+        return super.getHeaders() + ", " + HEADERS;
+    }
+
+    @Override
+    public String toCsv() {
+        return super.toCsv() + ", " + getSeatLiftHeightInMeter() + ", " + getWheelRadius();
+    }
+
+    public Unicycle(final String bikeBrand, final int bikeMaxSpeedInMph,
+                    final int bikeCurrentSpeedInMph,
                     final int seatLiftHeightInMeter, final int wheelRadius) {
-        super(bikeBrand, bikeMaxSpeedInMPH, bikeCurrentSpeedInMPH);
+        super(bikeBrand, bikeMaxSpeedInMph, bikeCurrentSpeedInMph);
         this.seatLiftHeightInMeter = seatLiftHeightInMeter;
         this.wheelRadius = wheelRadius;
     }
